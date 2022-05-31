@@ -1,0 +1,5 @@
+project: rnshah9/opencc
+target: opencc-dict
+
+cmds:
+  - cmd: /repo/build/rel/src/tools/opencc_dict -i @@ -f text -t ocd -o out
