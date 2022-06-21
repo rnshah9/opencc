@@ -1,4 +1,4 @@
-project: rnshah9/opencc
+project: opencc
 target: opencc-dict
 
 cmds:
