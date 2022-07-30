@@ -2,4 +2,4 @@ project: opencc
 target: opencc-dict
 
 cmds:
-  - cmd: /repo/build/rel/src/tools/opencc_dict -i @@ -f text -t ocd -o out
+  - cmd: /install/bin/opencc_dict -i @@ -f text -t ocd -o out

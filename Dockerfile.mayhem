@@ -6,12 +6,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential cmake doxy
 COPY . /repo
 WORKDIR /repo
 RUN make -j8
-
-RUN mkdir -p /deps
-RUN ldd /repo/build/rel/src/tools/opencc_dict | tr -s '[:blank:]' '\n' | grep '^/' | xargs -I % sh -c 'cp % /deps;'
+RUN make install PREFIX=/install
 
 FROM ubuntu:22.04 as package
-
-COPY --from=builder /deps /deps
-COPY --from=builder /repo/build/rel/src/tools/opencc_dict /repo/build/rel/src/tools/opencc_dict
-ENV LD_LIBRARY_PATH=/deps
+COPY --from=builder /install /install
+ENV LD_LIBRARY_PATH=/install/lib
