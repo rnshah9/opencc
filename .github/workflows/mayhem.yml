@@ -51,7 +51,8 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-          - mayhem/Mayhemfile
+          - mayhem/Mayhemfile_opencc_dict
+          - mayhem/Mayhemfile_truncate_utf8
 
     steps:
       - uses: actions/checkout@v2

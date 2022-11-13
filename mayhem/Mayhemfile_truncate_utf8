@@ -1,0 +1,6 @@
+project: opencc
+target: truncate-utf8
+
+cmds:
+  - cmd: /fuzz_truncate_utf8
+image: ghcr.io/rnshah9/playground:opencc

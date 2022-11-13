@@ -3,3 +3,4 @@ target: opencc-dict
 
 cmds:
   - cmd: /install/bin/opencc_dict -i @@ -f text -t ocd -o out
+image: ghcr.io/rnshah9/playground:opencc
